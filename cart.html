@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="styleSheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!----------------------------------------------------SECTION 1 NAV BAR------------------------------------------------------------ -->
+
+    <div class="navBarSection">
+        <div class="signUpNow">
+            <span class="Spantext">
+                <p class="signUpText">Sign up and get 20% off to your first order.</p><a href="#"
+                    class="signUpNowA">Sign Up Now</a>
+            </span>
+        </div>
+
+        <div class="shopCo">
+            <p class="shopCoText">SHOP.CO</p>
+            <div class="navBar">
+                <div class="dropdown">
+                    <a href="shop.html">Shop <img src="Icons/dropDownMenu.png" class="arrowImage"></a>
+                    <div class="dropdownContent">
+                        <a href="shopMen.html">Men</a>
+                        <a href="shopWomen.html">Women</a>
+                    </div>
+                </div>
+                <a href="onSale.html">On Sale</a>
+                <a href="newArrivals.html">New Arrivals</a>
+                <a href="#">Brands</a>
+            </div>
+            <form>
+                <input type="text" id="search" class="FormInput" placeholder="Search for products..." />
+            </form>
+            <div class="cartAndProfileIcon">
+                <a href="cart.html"><img src="Icons/cart.png" class="iconFilter" /></a>
+                <img src="Icons/profile.png" class="iconFilter" />
+                <button id="themeToggle"><img src="Icons/light_mode.png" class="iconFilter mode"></button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="breadcrumb" id="breadcrumb"></div>
+
+    <!----------------------------------------------------SECTION 2 YOUR CART----------------------------------------------------------- -->
+    <div class="yourCartBigDiv">
+        <p class="yourCartHead">Your cart</p>
+        <div class="cartListAndOrderSummry">
+
+            <div class="cartListDiv">
+                <div class="cartItem">
+                    <div class="itemDetails">
+                        <img class="itemImage" src="" />
+                        <div class="itemDetailsText">
+                            <div class="titlesItem">
+                                <p class="itemName"></p>
+
+                                <p class="itemSize">
+                                    <span class="itemSizeLable">Size: </span>
+                                    <span class="itemSizeValue"></span>
+                                </p>
+
+                                <p class="itemType">
+                                    <span class="itemTypeLable">Type: </span>
+                                    <span class="itemTypeValue"></span>
+                                </p>
+                            </div>
+                            <p class="priceInfoCart"></p>
+                        </div>
+                    </div>
+
+                    <div class="deleteAndIncrementItem">
+                        <button class="deletebtn"><img src="Icons/deleteItem.png" width="30px" height="30px"></button>
+                        <div class="counterForProductCart">
+                            <img class="minusProduct" src="Icons/minus.png" width="24px" height="24px" />
+                            <p class="counterNumber">1</p>
+                            <img class="plusProduct" src="Icons/plus.png" width="24px" height="24px" />
+                        </div>
+                    </div>
+                </div>
+                <div class="borderSummry"></div>
+            </div>
+
+            <div class="orderSummryDivAndClearBtn">
+                <div class="orderSummryDiv">
+                    <p class="orderSummryHead">Order Summary</p>
+
+                    <div class="feesSummary">
+                        <p class="subtotal">Subtotal</p>
+                        <p class="subTotalValue"></p>
+                    </div>
+
+                    <div class="feesSummary">
+                        <p class="discountSummary">Discount</p>
+                        <p class="discountValue"></p>
+                    </div>
+
+                    <div class="borderSummry"></div>
+
+                    <div class="feesSummary">
+                        <p class="totalSummary">Total</p>
+                        <p class="totalValue"></p>
+                    </div>
+
+                </div>
+                <button class="clearcart">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------SECTION 7 LAST SECTION---------------------------------------------------------- -->
+
+    <div class="lastSection">
+        <div class="stayUpToDateBigDiv">
+            <p class="stayUpToDateTitle">STAY UPTO DATE ABOUT<br> OUR LATEST OFFERS</p>
+            <div class="fieldsButtons">
+                <form>
+                    <input type="email" id="email" class="FormInput2" placeholder="Enter your email address" />
+                </form>
+                <a href="#" class="subscribeButton">Subscribe to Newsletter</a>
+            </div>
+        </div>
+        <div class="aboutShopCo">
+            <div class="aboutTitles">
+
+                <div class="aboutSmallDiv shopCoSmallDiv">
+                    <p class="shopCoText">SHOP.CO</p>
+                    <p class="shopCoSmallDivTitle">We have clothes that suits your style and<br>
+                        which you’re proud to wear. From<br>women to men.</p>
+                    <div class="socialIcons">
+                        <div class="divIcons"><img src="Icons/twitterIcon.png" width="11.17px" height="9.03px"></div>
+                        <div class="divIcons"><img src="Icons/FacebookIcon.png" width="6.32px" height="12.17px"></div>
+                        <div class="divIcons"><img src="Icons/instagramIcon.png" width="13.55px" height="13.55px"></div>
+                        <div class="divIcons"><img src="Icons/github.png" width="12.96px" height="12.65px"></div>
+                    </div>
+                </div>
+
+                <div class="aboutSmallDiv companySmallDiv">
+                    <p class="head">Company</p>
+                    <a href="">About</a>
+                    <a href="">Features</a>
+                    <a href="">Works</a>
+                    <a href="">Career</a>
+                </div>
+
+                <div class="aboutSmallDiv HelpSmallDiv">
+                    <p class="head">Help</p>
+                    <a href="">Customer Support</a>
+                    <a href="">Delivery Details</a>
+                    <a href="">Terms & Conditions</a>
+                    <a href="">Privacy Policy</a>
+                </div>
+
+                <div class="aboutSmallDiv faqSmallDiv">
+                    <p class="head">faq</p>
+                    <a href="">Account</a>
+                    <a href="">Manage Deliveries</a>
+                    <a href="">Orders</a>
+                    <a href="">Payments</a>
+                </div>
+
+                <div class="aboutSmallDiv resourcesSmallDiv">
+                    <p class="head">Resources</p>
+                    <a href="">Free eBooks</a>
+                    <a href="">Development Tutorial</a>
+                    <a href="">How to - Blog</a>
+                    <a href="">Youtube Playlist</a>
+                </div>
+            </div>
+
+            <div class="borderBottom2"></div>
+
+            <div class="copyRightAndPaymentOptions">
+                <p class="copyRightText">Shop.co © 2000-2023, All Rights Reserved</p>
+                <div class="paymentOptions">
+                    <div class="paymentOptionsCon"><img src="Icons/Visa.png" width="32.54px" height="10.51px"></div>
+                    <div class="paymentOptionsCon"><img src="Icons/Mastercard.png" width="25.38px" height="15.69px">
+                    </div>
+                    <div class="paymentOptionsCon"><img src="Icons/Paypal.png" width="34.55px" height="11.21px"></div>
+                    <div class="paymentOptionsCon"><img src="Icons/PayBlack.png" width="26.41px" height="10.51px"
+                            class="PayBlack"></div>
+                    <div class="paymentOptionsCon"><img src="Icons/GooglePay.png" width="28.56px" height="11.21px"
+                            class="GooglePay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------- -->
+    <script src="script.js"></script>
+</body>
+
+</html>

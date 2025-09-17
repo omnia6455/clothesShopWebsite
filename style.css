@@ -1,0 +1,2014 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #FFFF;
+    --mostCommon-color: #000000;
+    --shopCo--text: #000000;
+    --small-text: #00000099;
+    --textButton: #FFFFFF;
+    --textForm: #00000066;
+    --backgroundForm: #F0F0F0;
+    --image-filter: none;
+    --backgound-findclothes: #F2F0F1;
+    --border-button: #0000001A;
+    --filterIcons: invert(1);
+    --size-value: #FF3333;
+}
+
+[data-theme="dark"] {
+    --body-color: #000000;
+    --mostCommon-color: #FFFF;
+    --shopCo--text: #FF3333;
+    --small-text: #ffffffa9;
+    --textButton: #000000;
+    --textForm: #ffffffa9;
+    --backgroundForm: #ffffffc1;
+    --image-filter: brightness(0) invert(1);
+    --backgound-findclothes: #1c1c1c;
+    --border-button: #ffffff64;
+    --filterIcons: var(--image-filter) invert(1);
+    --size-value: #ffffffa9;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--body-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* //////////////////////////////////////////////////////////SECTION 1 NAV BAR//////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.navBarSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: auto;
+    gap: 10px;
+    max-width: 1750px;
+}
+
+.signUpNow {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--shopCo--text);
+}
+
+.Spantext {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.signUpText {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--textButton);
+}
+
+.signUpNowA {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    border-bottom: 1.6px solid var(--textButton);
+    padding-bottom: 1px;
+    color: var(--textButton);
+    transition: 1s ease;
+}
+
+.signUpNowA:hover {
+    transform: scale(1.1);
+}
+
+.shopCo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    max-width: 1750px;
+
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.shopCoText {
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--shopCo--text);
+}
+
+.navBar a {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--mostCommon-color);
+    transition: 0.9s ease;
+}
+
+.navBar a:hover {
+    border-bottom: 2px solid var(--small-text);
+    padding-bottom: 5px;
+}
+
+.navBar a.active {
+    border-bottom: 2px solid var(--small-text);
+    padding-bottom: 5px;
+}
+
+.FormInput {
+    border: 1px solid var(--backgroundForm);
+    padding-left: 50px;
+    border-radius: 62px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    background: url("Icons/search.png") no-repeat 15px center;
+    background-color: var(--backgroundForm);
+}
+
+.FormInput::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #00000099;
+    font-family: 'Satoshi';
+}
+
+form input {
+    width: 100%;
+    min-width: 360px;
+    height: 48px;
+}
+
+.cartAndProfileIcon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.iconFilter {
+    width: 24px;
+    height: 24px;
+    filter: var(--image-filter);
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.mode {
+    width: 26px;
+    height: 26px;
+}
+
+#themeToggle {
+    background-color: transparent;
+    border: none;
+}
+
+.iconFilter:hover {
+    transform: scale(1.2);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: var(--body-color);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.dropdownContent a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    color: var(--mostCommon-color);
+    transition: 0.3s ease;
+}
+
+.dropdownContent a:hover {
+    background-color: var(--backgound-findclothes);
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+.dropdown>a {
+    padding: 5px;
+}
+
+.arrowImage {
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+    filter: var(--image-filter);
+}
+
+.dropdown:hover .arrowImage {
+    transform: rotate(180deg);
+}
+
+.breadcrumb {
+    font-family: 'Satoshi';
+    font-size: 16px;
+    color: var(--small-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: auto;
+    width: 100%;
+    max-width: 1350px;
+    padding: 25px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--small-text);
+    transition: 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb p {
+    color: var(--shopCo--text);
+    font-weight: 500;
+}
+
+/* ////////////////////////////////////////////////////////////////////SECTION 2 FIND CLOTHES////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.findClothesBigDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1750px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 50px 30px 35px;
+    height: auto;
+    margin: auto;
+    background-color: var(--backgound-findclothes);
+    overflow: hidden;
+}
+
+.findClothesTexts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 70px;
+}
+
+.findClothesHead {
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--mostCommon-color);
+}
+
+.findClothesPara {
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--small-text);
+}
+
+.shopNowButton {
+    width: 100%;
+    max-width: 210px;
+    height: 52px;
+    border-radius: 62px;
+    padding: 16px 54px 16px 54px;
+    text-align: center;
+    background-color: var(--shopCo--text);
+    color: var(--textButton);
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 500;
+    transition: 1s ease;
+}
+
+.shopNowButton:hover {
+    box-shadow: 0px 8px 24px var(--shopCo--text);
+    transform: scale(1.1);
+}
+
+.numberRows {
+    min-width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bigNumberAndTitle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.bigNumberAndTitle .bigNumber {
+    font-family: 'Satoshi';
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--mostCommon-color);
+}
+
+.bigNumberAndTitle .titleNumber {
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--small-text);
+}
+
+.borderLeft {
+    margin-top: 35px;
+    width: 74px;
+    height: 0px;
+    border: 1px solid var(--textForm);
+    transform: rotate(-90deg);
+}
+
+.bigImage {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    max-width: 530px;
+    margin-bottom: -200px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.smallStarPos {
+    width: 56px;
+    height: 56px;
+    margin-top: -150px;
+    margin-right: -40px;
+    filter: var(--image-filter);
+    animation-delay: 0s;
+    animation: flying 1.5s ease-in-out infinite;
+    transition: 0.5s ease;
+}
+
+.bigStarPos {
+    width: 104px;
+    height: 104px;
+    filter: var(--image-filter);
+    margin-top: -400px;
+    margin-left: -40px;
+    animation-delay: 0s;
+    animation: flying 2.5s ease-in-out infinite;
+    transition: 0.5s ease;
+}
+
+.clotheImage {
+    width: 100%;
+    max-width: 1400px;
+    height: 748px;
+}
+
+.logos {
+    width: 100%;
+    max-width: 1750px;
+    min-width: 390px;
+    min-height: 122px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0px 20px 0px;
+    margin: auto;
+    background-color: var(--mostCommon-color);
+    margin-bottom: 100px;
+}
+
+.logos img {
+    cursor: pointer;
+    filter: var(--image-filter) invert(1);
+    opacity: 0.8;
+    transition: 1s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.versace {
+    width: 166.48175048828125px;
+    height: 33.16448211669922px;
+}
+
+.zara {
+    width: 91px;
+    height: 38px;
+}
+
+.gucci {
+    width: 156px;
+    height: 36px;
+
+}
+
+.prada {
+    width: 194px;
+    height: 32px;
+
+}
+
+.calvinKlein {
+    width: 206.78785705566406px;
+    height: 33.34809494018555px;
+}
+
+/* ////////////////////////////////////////////////////////////////////SECTION 3 TOP SELLING////////////////////////////////////////////////////////////////////////////////////////////// */
+.Section3and4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    width: 100%;
+    height: auto;
+    max-width: 1350px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.newArrivalHead {
+    font-family: 'integralcf';
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--mostCommon-color);
+}
+
+.clothesImages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+}
+
+.arrivalsImagesBigDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.9s ease;
+    box-sizing: border-box;
+}
+
+.arrivalsImagesBigDiv:hover {
+    transform: scale(1.05);
+    background-color: var(--body-color);
+    box-shadow: 0px 8px 24px var(--shopCo--text);
+}
+
+.arrivalsImagesDiv {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 0px;
+}
+
+.arrivalsImagesDiv img {
+    border-radius: 20px;
+    height: 298px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    background-color: #F0EEED;
+}
+
+.imagesInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+}
+
+.titleInfo {
+    font-family: 'Satoshi';
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--mostCommon-color);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.stars i {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.ratingNumber {
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--mostCommon-color);
+}
+
+.priceInfo {
+    font-family: 'Satoshi';
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--mostCommon-color);
+}
+
+.priceDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.oldPreice {
+    text-decoration: line-through;
+    font-family: 'Satoshi';
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--textForm);
+}
+
+.discount {
+    width: 58px;
+    height: 28px;
+    border-radius: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF33331A;
+    font-family: 'Satoshi';
+    font-size: 12px;
+    font-weight: 500;
+    color: #FF3333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.viewAllButton {
+    width: 40%;
+    max-width: 218px;
+    height: 52px;
+    border-radius: 62px;
+    border: 1px solid var(--border-button);
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--mostCommon-color);
+    transition: 1s ease;
+}
+
+.viewAllButton:hover {
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+    transform: scale(1.1);
+}
+
+.borderBottom1 {
+    width: 100%;
+    max-width: 1250px;
+    height: 0px;
+    border: 1px solid var(--border-button);
+}
+
+/* ////////////////////////////////////////////////////////////////////SECTION 5 BROWS BY DRESS STYLE////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.browseDressStyleSection {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--backgound-findclothes);
+    border-radius: 40px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.browseDressStyleHead {
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--mostCommon-color);
+}
+
+.casualFormalPartGymDiv {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, 289px);
+    overflow: hidden;
+    padding: 20px;
+    gap: 20px;
+}
+
+.textAndImageBigDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--body-color);
+    transition: 0.9s ease;
+}
+
+.textAndImageBigDiv:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+}
+
+.textBrowsw {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--mostCommon-color);
+}
+
+.textAndImageBigDiv img {
+    object-fit: cover;
+}
+
+.casualImage {
+    width: 973px;
+    height: 649px;
+    margin-left: -400px;
+    margin-top: -195px;
+}
+
+.formalImage {
+    width: 1306px;
+    height: 870px;
+    margin-top: -220px;
+}
+
+.partImage {
+    width: 770px;
+    height: 616px;
+    margin-top: -220px;
+    margin-left: 42px;
+}
+
+.gymImage {
+    width: 452px;
+    height: 677px;
+    margin-top: -220px;
+    margin-left: -30px;
+}
+
+.casualDiv {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+}
+
+.formalDiv {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.partyDiv {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.gymDiv {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+/* ////////////////////////////////////////////////////////////////////SECTION 6 HAPPY CUSTOMERS////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.customersSection {
+    width: 100%;
+    max-width: 1350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.customersHead {
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.customerTitle {
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--mostCommon-color);
+    padding-bottom: 30px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circleCustomers {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s ease;
+
+}
+
+.circleCustomers:hover {
+    border-radius: 50%;
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+    background-color: var(--body-color);
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    filter: var(--image-filter);
+}
+
+
+.cardsBigDiv {
+    width: 100%;
+    max-width: 1350px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto hidden;
+    margin: auto;
+    padding: 30px 10px 30px 2px;
+    scroll-behavior: smooth;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+}
+
+.cardsBigDiv::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 400px;
+    max-width: 390px;
+    min-height: 240px;
+    height: auto;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid var(--border-button);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+}
+
+.card.partially-visible {
+    filter: blur(2px);
+    opacity: 0.7;
+}
+
+.textAndGreeendiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.customerName {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--shopCo--text);
+}
+
+.customerPara {
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--small-text);
+    line-height: 25px;
+}
+
+/* ////////////////////////////////////////////////////////////////////SECTION LAST SECTION////////////////////////////////////////////////////////////////////////////////////////////// */
+.lastSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1750px;
+    margin: auto;
+    height: auto;
+}
+
+.stayUpToDateBigDiv {
+    z-index: 2;
+    width: 100%;
+    max-width: 1350px;
+    min-width: 410px;
+    height: auto;
+    min-height: 180px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: -40px;
+    overflow: hidden;
+    background-color: var(--mostCommon-color);
+}
+
+.stayUpToDateTitle {
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--textButton);
+}
+
+.fieldsButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FormInput2 {
+    border: 1px solid var(--textButton);
+    padding-left: 60px;
+    border-radius: 62px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--mostCommon-color);
+    background: url("Icons/emailIcon.png") no-repeat 20px center;
+    background-size: 20.25px 15.75px;
+    background-color: var(--textButton);
+}
+
+body.dark .FormInput2 {
+    border: 1px solid var(--textButton);
+    padding-left: 60px;
+    border-radius: 62px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    background: url("Icons/emailIcon_darkMode.png") no-repeat 20px center;
+    background-size: 20px 16px;
+    background-color: var(--textButton);
+}
+
+.FormInput2::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--small-text);
+    font-family: 'Satoshi';
+}
+
+.subscribeButton {
+    width: 100%;
+    max-width: 360px;
+    height: 46px;
+    border-radius: 62px;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--mostCommon-color);
+    transition: 1s ease;
+}
+
+.subscribeButton:hover {
+    transform: scale(1.05);
+}
+
+.aboutShopCo {
+    width: 100%;
+    max-width: 1750px;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgound-findclothes);
+}
+
+.aboutTitles {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.aboutSmallDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shopCoSmallDivTitle {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--textForm);
+}
+
+.socialIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.divIcons {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--border-button);
+    border-radius: 50%;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divIcons img {
+    filter: var(--image-filter);
+}
+
+.divIcons:hover {
+    background-color: var(--mostCommon-color);
+}
+
+.divIcons:hover img {
+    filter: var(--filterIcons);
+}
+
+.head {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--mostCommon-color);
+}
+
+.aboutSmallDiv a {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--small-text);
+}
+
+.borderBottom2 {
+    margin: 30px;
+    width: 100%;
+    max-width: 1350px;
+    height: 0px;
+    border: 1px solid var(--border-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyRightAndPaymentOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+    gap: 20px;
+}
+
+.copyRightText {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+    color: var(--textForm);
+}
+
+.paymentOptions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.paymentOptionsCon {
+    width: 46.61px;
+    height: 30.03px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-color);
+    border: 0.22px solid #D6DCE5;
+    border-radius: 5.38px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.paymentOptionsCon:hover {
+    transform: scale(1.1);
+}
+
+.PayBlack,
+.GooglePay {
+    filter: var(--image-filter);
+}
+
+/* ////////////////////////////////////////////////////////////////////EXTRA PAGES////////////////////////////////////////////////////////////////////////////////////////////// */
+.onsaleHead {
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* ////////////////////////////////////////////////////////////////////PRODUCT INFO//////////////////////////////////////////////////////////////////////////////////////////// */
+.clotheInfoBigDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1350px;
+    height: auto;
+    margin: auto;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ClotheImageDynamic {
+    background-color: #F0EEED;
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+    width: 100%;
+    max-width: 444px;
+    height: 530px;
+    min-height: 290px;
+    min-width: 358px;
+    border-radius: 20px;
+}
+
+.bigDivDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+    margin-right: 200px;
+    height: auto;
+    min-height: 530px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clotheInfoDetails {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.shirtTitle {
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--mostCommon-color);
+}
+
+.detailsOfTheShirt {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--small-text);
+}
+
+.borderBottomDetail {
+    width: 100%;
+    max-width: 590px;
+    height: 0px;
+    border: 1px solid var(--border-button);
+}
+
+.addToCartDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.counterNumber {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+.addToCartBtn {
+    width: 100%;
+    max-width: 400px;
+    min-width: 236px;
+    height: 52px;
+    min-height: 44px;
+    border-radius: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Satoshi';
+    font-weight: 500;
+    color: var(--textButton);
+    background-color: var(--mostCommon-color);
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.addToCartBtn:hover {
+    transform: scale(1.1);
+}
+
+.DetailsRatingFaqsBigDiv {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.borderAndTitles {
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.DetailsRatingFaqsHead {
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.DetailsRatingFaqsTitles {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--small-text);
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+}
+
+.borderBottomTitles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    border: 1px solid var(--border-button);
+    width: 100%;
+}
+
+.DetailsRatingFaqsTitles.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 0px;
+    border: 2px solid var(--mostCommon-color);
+    width: 100%;
+}
+
+.reviewsAndRatings {
+    width: 100%;
+    min-width: 390px;
+    max-width: 1350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    height: auto;
+}
+
+.reviewsAndRatingsHead {
+    width: 100%;
+    max-width: 1350px;
+    text-align: left;
+    padding-left: 40px;
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--mostCommon-color);
+}
+
+.cardsBigDiv2 {
+    width: 100%;
+    max-width: 1350px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card2 {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 358px;
+    max-width: 610px;
+    min-height: 240px;
+    height: auto;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid var(--border-button);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.9s ease;
+}
+
+.card2:hover {
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+    transform: translateY(-15px);
+}
+
+.datePosted {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--small-text);
+}
+
+.loadMoreReviews {
+    width: 40%;
+    max-width: 230px;
+    min-width: 195px;
+    height: 52px;
+    min-height: 47px;
+    border-radius: 62px;
+    border: 1px solid var(--border-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Satoshi';
+    font-weight: 500;
+    color: var(--mostCommon-color);
+    transition: 1s ease;
+}
+
+.loadMoreReviews:hover {
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+    transform: scale(1.1);
+}
+
+.DetailsRatingFaqsTitles.active {
+    color: var(--mostCommon-color);
+    font-family: 'Satoshi';
+    font-weight: 500;
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.productDetailsTab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: start;
+    padding: 20px;
+    max-width: 1350px;
+    width: 100%;
+}
+
+.imageAndProductTitle {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.imageOfTheProduct {
+    font-size: 28px;
+    font-family: 'integralcf';
+    font-weight: 700px;
+    color: var(--shopCo--text);
+}
+
+.detailsTabImage {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    background-color: #F0EEED;
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+}
+
+.detailsTabTitle {
+    font-family: 'integralcf';
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--mostCommon-color);
+}
+
+.productDetailsPriceStarsDes {
+    width: 100%;
+    max-width: 675px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productDetailsInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.productRatingsAndPriceInfo {
+    font-size: 25px;
+    font-family: 'integralcf';
+    font-weight: 700px;
+    color: #000000;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px var(--shopCo--text);
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sizeLabel {
+    color: var(--shopCo--text);
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.sizeValue {
+    color: var(--size-value);
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.typeLabel {
+    color: var(--shopCo--text);
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.typeValue {
+    color: var(--size-value);
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.faqsHead {
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-family: 'Satoshi';
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--small-text);
+}
+
+/* ////////////////////////////////////////////////////////////////////YOUR CART//////////////////////////////////////////////////////////////////////////////////////////// */
+.yourCartBigDiv {
+    width: 100%;
+    max-width: 1350px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    gap: 30px;
+}
+
+.yourCartHead {
+    width: 100%;
+    text-align: left;
+    font-family: 'integralcf';
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--mostCommon-color);
+}
+
+.cartListAndOrderSummry {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartListDiv {
+    width: 100%;
+    max-width: 715px;
+    min-width: 380px;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid var(--border-button);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cartItem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.itemImage {
+    width: 100%;
+    max-width: 124px;
+    height: 130px;
+    border-radius: 8.66px;
+    background-color: #F0EEED;
+    object-fit: cover;
+}
+
+.itemDetailsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px
+}
+
+.titlesItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itemName {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--mostCommon-color);
+}
+
+.itemSizeLable {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--mostCommon-color);
+}
+
+.itemSizeValue {
+    font-family: Satoshi;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--small-text);
+}
+
+.itemTypeLable {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--mostCommon-color);
+}
+
+.itemTypeValue {
+    font-family: Satoshi;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--small-text);
+}
+
+.deleteAndIncrementItem {
+    width: 100%;
+    max-width: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.deletebtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.deletebtn:hover {
+    transform: scale(1.2);
+}
+
+.counterForProductCart {
+    width: 100%;
+    max-width: 130px;
+    height: 44px;
+    border-radius: 62px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    background-color: var(--backgroundForm);
+}
+
+.counterForProductCart img {
+    cursor: pointer;
+}
+
+.priceInfoCart {
+    font-family: 'Satoshi';
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--mostCommon-color);
+}
+
+.orderSummryDivAndClearBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 520px;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderSummryDiv {
+    width: 100%;
+    max-width: 505px;
+    border-radius: 20px;
+    height: auto;
+    min-height: 300px;
+    padding: 30px;
+    border: 1px solid var(--border-button);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.orderSummryHead {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--mostCommon-color);
+    padding-bottom: 10px;
+}
+
+.feesSummary {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subtotal {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--small-text);
+}
+
+.subTotalValue {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--mostCommon-color);
+}
+
+.discountSummary {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--small-text);
+}
+
+.discountValue {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FF3333;
+}
+
+.borderSummry {
+    width: 100%;
+    height: 0px;
+    border: 1px solid var(--border-button);
+}
+
+.totalSummary {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--mostCommon-color);
+}
+
+.totalValue {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--mostCommon-color);
+}
+
+.clearcart {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    border-radius: 62px;
+    background-color: var(--mostCommon-color);
+    color: var(--textButton);
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Satoshi';
+    font-weight: 700;
+}
+
+/* ////////////////////////////////////////////////////////////////////MEDIAAA & FONTS & ANIMATIONS///////////////////////////////////////////////////////////////////////// */
+
+@media(max-width:1200px) {
+    .casualFormalPartGymDiv {
+        grid-template-columns: 1fr;
+        grid-template-rows: 289px 289px 289px 289px;
+    }
+
+    .casualDiv {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+    }
+
+    .formalDiv {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .partyDiv {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .gymDiv {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .formalImage,
+    .partImage {
+        margin-left: -100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrivalsImagesBigDiv:hover {
+        display: flex;
+        justify-content: center;
+        transform: scale(0.9);
+    }
+
+    .clothesImages {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+        padding: 0 10px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .clothesImages::-webkit-scrollbar {
+        display: none;
+    }
+
+    .arrivalsImagesBigDiv {
+        flex: 0 0 100%;
+        max-width: 100%;
+        scroll-snap-align: center;
+    }
+
+    .yourCartBigDiv {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .findClothesBigDiv {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .navBarSection {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .Section3and4 {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .browseDressStyleSection {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .customersSection {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .lastSection {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .clotheInfoBigDiv {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .DetailsRatingFaqsBigDiv {
+        width: 100%;
+        min-width: 390px;
+    }
+
+    .shopNowButton {
+        width: 100%;
+        min-width: 340px;
+    }
+
+    .findClothesHead {
+        font-size: 36px;
+    }
+
+    .faqsHead {
+        font-size: 40px;
+    }
+
+    .customerTitle {
+        font-size: 32px;
+    }
+
+    .viewAllButton {
+        width: 100%;
+        min-width: 340px;
+    }
+
+    .casualFormalPartGymDiv {
+        grid-template-columns: 1fr;
+        grid-template-rows: 289px 289px 289px 289px;
+    }
+
+    .casualDiv {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+    }
+
+    .formalDiv {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .partyDiv {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .gymDiv {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .formalImage,
+    .partImage {
+        margin-left: -200px;
+    }
+
+    .titleInfo {
+        font-size: 18px;
+    }
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Medium.otf') format('truetype');
+    font-weight: 500;
+
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Regular.otf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Bold.otf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'integralcf';
+    src: url('./fonts/Fontspring-DEMO-integralcf-bold.otf') format('truetype');
+    font-weight: 700;
+}
+
+@keyframes flying {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Shop</title>
+    <link rel="styleSheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!----------------------------------------------------SECTION 1 NAV BAR------------------------------------------------------------ -->
+
+    <div class="navBarSection">
+        <div class="signUpNow">
+            <span class="Spantext">
+                <p class="signUpText">Sign up and get 20% off to your first order.</p><a href="#"
+                    class="signUpNowA">Sign Up Now</a>
+            </span>
+        </div>
+
+        <div class="shopCo">
+            <p class="shopCoText">SHOP.CO</p>
+            <div class="navBar">
+                <div class="dropdown">
+                    <a href="shop.html">Shop <img src="Icons/dropDownMenu.png" class="arrowImage"></a>
+                    <div class="dropdownContent">
+                        <a href="shopMen.html">Men</a>
+                        <a href="shopWomen.html">Women</a>
+                    </div>
+                </div>
+                <a href="onSale.html">On Sale</a>
+                <a href="newArrivals.html">New Arrivals</a>
+                <a href="#">Brands</a>
+            </div>
+            <form>
+                <input type="text" id="search" class="FormInput" placeholder="Search for products..." />
+            </form>
+            <div class="cartAndProfileIcon">
+                <a href="cart.html"><img src="Icons/cart.png" class="iconFilter" /></a>
+                <img src="Icons/profile.png" class="iconFilter" />
+                <button id="themeToggle"><img src="Icons/light_mode.png" class="iconFilter mode"></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="breadcrumb" id="breadcrumb"></div>
+    <!----------------------------------------------------SECTION 2 SHOPPING------------------------------------------------------------ -->
+    <div class="Section3and4">
+        <p class="newArrivalHead onsaleHead">Our Products</p>
+        <div class="clothesImages">
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="1">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/black_t-shirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">T-SHIRT WITH TAPE DETAILS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$130</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="2">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/jeans.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">SKINNY FIT JEANS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$240</p>
+                            <p class="oldPreice">$260</p>
+                            <p class="discount">-20%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="3">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/colorfulshirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">CHECKERED SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$180</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="4">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/sportShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">SLEEVE STRIPED T-SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$130</p>
+                            <p class="oldPreice">$160</p>
+                            <p class="discount">-30%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="5">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/pinkShirtWithNoThing.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">T-SHIRT WITH PINK COLOR</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">5/5</span>
+                        </div>
+                        <p class="priceInfo">$150</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="6">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/babyBlueShortJeans.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">SKINNY FIT SHORT JEANS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$240</p>
+                            <p class="oldPreice">$250</p>
+                            <p class="discount">-10%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="7">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/plaidGreenShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">GREEN CHECKERED SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$200</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="8">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/burgundyShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">BURGUNDY T-SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$250</p>
+                            <p class="oldPreice">$300</p>
+                            <p class="discount">-50%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="9">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/brownShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">T-SHIRT WITH BROWN COLOR</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$180</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="10">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/jeansBlackW.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">SKINNY FIT JEANS BLACK</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$315</p>
+                            <p class="oldPreice">$370</p>
+                            <p class="discount">-15%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="11">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/purplePlaidShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">purple CHECKERED SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">2.5/5</span>
+                        </div>
+                        <p class="priceInfo">$100</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="12">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/yellowShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">YELLOW T-SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$230</p>
+                            <p class="oldPreice">$250</p>
+                            <p class="discount">-20%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="13">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/greenShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">VERTICAL STRIPED SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$212</p>
+                            <p class="oldPreice">$232</p>
+                            <p class="discount">-20%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="14">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/orangeShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">COURAGE GRAPHIC T-SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4/5</span>
+                        </div>
+                        <p class="priceInfo">$145</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="15">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/shortjeans.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">LOOSE FIT BERMUDA SHORTS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3/5</span>
+                        </div>
+                        <p class="priceInfo">$80</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="16">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/blackJeans.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">FADED SKINNY JEANS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$210</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="17">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/brownPlaidShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">STRIPED BROWN SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$180</p>
+                            <p class="oldPreice">$200</p>
+                            <p class="discount">-20%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="18">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/blackTShirtWithnoThing.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">GRAPHIC BLACK T-SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$240</p>
+                            <p class="oldPreice">$250</p>
+                            <p class="discount">-10%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="19">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/blackShortJeans.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">FIT BERMUDA BLACK SHORTS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4/5</span>
+                        </div>
+                        <p class="priceInfo">$90</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="20">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/blueJeansM.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">SKINNY BLUE JEANS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$310</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="21">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/blackPlaidShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">STRIPED BLACK SHIRT</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$250</p>
+                            <p class="oldPreice">$280</p>
+                            <p class="discount">-30%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="22">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/oilShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">One Life Graphic T-shirt</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$260</p>
+                            <p class="oldPreice">$300</p>
+                            <p class="discount">-40%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="23">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/whiteJeansShort.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">FIT BERMUDA WHITE SHORTS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3/5</span>
+                        </div>
+                        <p class="priceInfo">$100</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="24">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/blackJeansWomen.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">SKINNY BLACK JEANS</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$350</p>
+                    </div>
+                </div>
+            </a>
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="25">
+
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/babyBlueShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">Polo with Contrast Trims</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$212</p>
+                            <p class="oldPreice">$242</p>
+                            <p class="discount">-20%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="26">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/coloringShirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">Gradient Graphic T-shirt</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">3.5/5</span>
+                        </div>
+                        <p class="priceInfo">$145</p>
+                    </div>
+                </div>
+            </a>
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="27">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/pinkshirt.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">Polo with Tipping Details</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">4.5/5</span>
+                        </div>
+                        <p class="priceInfo">$180</p>
+                    </div>
+                </div>
+            </a>
+            <a href="productInfo.html">
+                <div class="arrivalsImagesBigDiv" data-id="28">
+                    <div class="arrivalsImagesDiv">
+                        <img src="Images/sportBlack.png" />
+                    </div>
+                    <div class="imagesInfo">
+                        <p class="titleInfo">Black Striped T-shirt</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFC633;"></i>
+                            <span class="ratingNumber">5/5</span>
+                        </div>
+                        <div class="priceDiv">
+                            <p class="priceInfo">$120</p>
+                            <p class="oldPreice">$150</p>
+                            <p class="discount">-30%</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------------------------- -->
+    <script src="script.js"></script>
+</body>
+
+</html>
