@@ -1,4 +1,4 @@
-# Clothes Shop Website 🛍️
+# Clothes Shop Website
 
 A fully responsive e-commerce website for a clothing store. Built with **HTML**, **CSS**, and **JavaScript**.  
 This project showcases product listings, dynamic search, shopping cart functionality, and breadcrumb navigation.
